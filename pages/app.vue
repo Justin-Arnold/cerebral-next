@@ -4,6 +4,8 @@ definePageMeta({
   layout: 'app'
 })
 
+const isOpen = ref(false)
+
 const links = useStorage<{name: string, url: string}[]>('cerebral-link-items', [])
 const hasLinks = computed(() => links.value.length)
 </script>
@@ -13,8 +15,9 @@ const hasLinks = computed(() => links.value.length)
         {{ each.name }}
     </AppLinkCard>
     <div v-if="!hasLinks" class="fixed top-0 left-0 h-screen w-screen grid place-items-center">
-        <div class="btn btn-ghost text-primary">
+        <div class="btn btn-ghost text-primary" @click="isOpen = true">
             Add New Service
         </div>
     </div>
+    <AppLinkAddModal v-model="isOpen"/>
 </template>
