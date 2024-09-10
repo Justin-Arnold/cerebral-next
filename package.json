@@ -19,6 +19,8 @@
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^3.4.4",
+    "@vueuse/core": "^11.0.3",
+    "@vueuse/nuxt": "^11.0.3",
     "daisyui": "^4.12.10"
   }
 }

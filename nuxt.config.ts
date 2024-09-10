@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@nuxt/icon',
     '@nuxt/fonts',
+    '@vueuse/nuxt',
   ],
   fonts: {
     local: {
