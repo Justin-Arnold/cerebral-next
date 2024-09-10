@@ -28,18 +28,10 @@
 </script>
 
 <template>
-    <HomeAboveFold  class="w-screen"/>
+    <HomeAboveFold />
     <div class="h-screen"></div>
     <div class="h-screen"></div>
     <div class="h-screen"></div>
     <div class="h-screen"></div>
     
 </template>
-
-<style scoped>
-div {
-  font-family: 'Simplifica', sans-serif;
-}
-
-
-</style>

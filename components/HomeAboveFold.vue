@@ -40,10 +40,10 @@ onMounted(() => {
     <div id="otf" class="h-screen relative transform-style-3d">
       <div id="front-content" class="absolute inset-0 backface-hidden h-screen border border-primary rounded-lg scale-110">
         <div class="flex flex-col items-center h-full justify-center">
-          <div class="w-full grid place-items-center text-[144px] tracking-widest leading-tight">
+          <div class="w-full grid place-items-center text-[144px] tracking-widest leading-tight simplifica">
             CEREBRAL
           </div>
-          <span class="text-3xl tracking-widest">
+          <span class="text-2xl font-thin tracking-widest">
             A mind expanding dashboard, your way
           </span>
           <div class="flex flex-row gap-4 form-control w-1/3 mt-12">
@@ -77,5 +77,9 @@ onMounted(() => {
 }
 .rotateY-180 {
   transform: rotateY(180deg);
+}
+
+.simplifica {
+  font-family: 'Simplifica', sans-serif;
 }
 </style>
