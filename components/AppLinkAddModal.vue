@@ -52,9 +52,9 @@ const addService = handleSubmit(values => {
                     <div>
                         <label class="flex flex-col gap-1">
                             Name
-                            <input class="input input-primary" v-model="name" v-bind="nameAttributes" />
+                            <input class="input input-primary" :class="{'input-error': !!errors.name?.length}" v-model="name" v-bind="nameAttributes" />
                         </label>
-                        <div>{{ errors.name }}</div>
+                        <div class="text-error">{{ errors.name }}</div>
                     </div>
                     <div>
                         <label class="flex flex-col gap-1">
