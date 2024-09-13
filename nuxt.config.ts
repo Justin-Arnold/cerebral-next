@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxt/fonts',
     '@vueuse/nuxt',
+    '@vee-validate/nuxt'
   ],
   fonts: {
     local: {
