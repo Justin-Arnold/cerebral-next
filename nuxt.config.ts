@@ -8,7 +8,8 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxt/fonts',
     '@vueuse/nuxt',
-    '@vee-validate/nuxt'
+    '@vee-validate/nuxt',
+    '@nuxt/image',
   ],
   fonts: {
     local: {
@@ -25,4 +26,7 @@ export default defineNuxtConfig({
   tailwindcss: {
     exposeConfig: true 
   },
+  image: {
+    dir: 'assets/img',
+},
 })
