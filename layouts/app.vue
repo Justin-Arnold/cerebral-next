@@ -10,6 +10,8 @@ const hasLinks = computed(() => !!links.value.length)
     <AppHeader>
         <template #header-menu>
             <AppLinkAddButton v-if="hasLinks" isGhost/>
+            <div>|</div>
+            <NuxtLink to="/settings" class="btn btn-ghost">Settings</NuxtLink>
         </template>
     </AppHeader>
     <div class="p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
