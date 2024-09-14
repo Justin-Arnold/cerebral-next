@@ -40,11 +40,16 @@ const addService = handleSubmit(values => {
     links.value.push(values)
     closeModal()
 });
-
-
 </script>
+
 <template>
-    <dialog ref="modal" modal class="modal backdrop:bg-black/30 backdrop:backdrop-blur-md" @close="isOpen = false" >
+    <dialog
+        v-if="isOpen"
+        ref="modal" 
+        modal class="modal backdrop:bg-black/30 backdrop:backdrop-blur-md" 
+        @close="isOpen = false"
+
+    >
         <div class="modal-box">
             <h3 class="text-lg font-bold">Add a new service</h3>
             <div class="modal-action">
