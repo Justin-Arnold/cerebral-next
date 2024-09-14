@@ -2,8 +2,9 @@
 definePageMeta({
   layout: 'app'
 })
+
 </script>
 
 <template>
-    Settings
+    Test
 </template>
