@@ -6,5 +6,7 @@ definePageMeta({
 </script>
 
 <template>
-    Test
+    <AppSettingsBodyCard>
+        <AppSettingsBackground />
+    </AppSettingsBodyCard>
 </template>

@@ -4,15 +4,19 @@ import { useStorage } from '@vueuse/core'
 const links = useStorage<{name: string, address: string}[]>('cerebral-link-items', [])
 const hasLinks = computed(() => !!links.value.length)
 
-const settings = useAppSettings()        
+
+const settings = useAppSettings()     
+const wallpaper = computed(() => settings.value.wallpaper)
+const wallpaperClass = computed(() => `bg-[url('/img${wallpaper.value}')]`)
 </script>
 
 <template>
-    <div class="absolute top-0 left-0 w-screen h-screen bg-[url('/img/watercolor.webp')] bg-cover blur">
-        <!-- <NuxtPicture format="webp" :src="'/watercolor.webp'" height="10000px"/> -->
-    </div>
+    <ClientOnly>
+        <div class="absolute top-0 left-0 w-screen h-screen bg-cover blur" :class="wallpaperClass" />
+    </ClientOnly>
     
-    <div class="absolute top-0 left-0 z-2 w-screen h-screen">
+    
+    <div class="absolute top-0 left-0 z-2 w-screen h-screen overflow-hidden p-4 flex flex-col gap-4">
         <AppHeader>
             <template #header-menu>
                 <AppLinkAddButton v-if="hasLinks" isGhost/>
@@ -20,7 +24,7 @@ const settings = useAppSettings()
                 <NuxtLink to="/settings" class="btn btn-ghost">Settings</NuxtLink>
             </template>
         </AppHeader>
-        <div class="p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
+        <div class="h-full w-full">
             <slot />
         </div>
     </div>

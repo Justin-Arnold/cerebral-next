@@ -5,5 +5,6 @@ export const useAppSettings = () => {
     wallpaper: '/watercolor.webp'
   })
 
+
   return settings
 }
