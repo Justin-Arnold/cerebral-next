@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@vee-validate/nuxt',
     '@nuxt/image',
+    '@formkit/auto-animate/nuxt',
   ],
   fonts: {
     local: {
