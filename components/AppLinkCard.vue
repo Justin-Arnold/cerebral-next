@@ -18,8 +18,8 @@ function onDeleteClick() {
             <slot></slot>
         </div>
         <div class="absolute top-0 left-0 h-fit w-full p-2 z-[2]">
-            <span class="float-right text-error hidden group-hover:inline hover:scale-110" @click.prevent="onDeleteClick">
-                T
+            <span class="float-right hidden group-hover:inline" @click.prevent="onDeleteClick">
+                <Icon name="mdi:trashcan-outline" class="text-2xl text-neutral hover:text-error"/>
             </span>
         </div>
     </NuxtLink>
