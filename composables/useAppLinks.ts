@@ -9,12 +9,12 @@ export const useAppLinks = () => {
     }
 
     function removeLink(link: Link) {
-        links.value =  links.value.filter(item => item === link);
+        links.value = links.value.filter(item => item.name !== link.name);
     }
 
     return {
         links,
-        addLink,
-        removeLink
+        add: addLink,
+        remove: removeLink
     }
 }
