@@ -29,7 +29,7 @@ const wallpaper = computed(() => settings.value.wallpaper)
                 <NuxtLink to="/settings" class="btn btn-ghost">Settings</NuxtLink>
             </template>
         </AppHeader>
-        <div class="h-full w-full">
+        <div class="h-full w-full overflow-auto">
             <slot />
         </div>
     </div>
