@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { Wallpaper } from '~/composables/useAppSettings';
 
 const settings = useAppSettings()
 
@@ -6,7 +7,6 @@ const wallpaperSettings = ref(settings.value.wallpaper)
 
 watch(wallpaperSettings, () => {
     settings.value.wallpaper = wallpaperSettings.value
-    console.log(settings.value.wallpaper)
 })
 
 </script>
@@ -16,8 +16,8 @@ watch(wallpaperSettings, () => {
         <label class="flex flex-col gap-1">
             Background Image
             <select class="input select" v-model="wallpaperSettings">
-                <option value="/watercolor.webp">Watercolor</option>
-                <option value="/cherryblossom.jpg">Cherry Blossom</option>
+                <option :value="Wallpaper.WATERCOLOR">Watercolor</option>
+                <option :value="Wallpaper.CHERRYBLOSSOM">Cherry Blossom</option>
             </select>
         </label>
     </div>

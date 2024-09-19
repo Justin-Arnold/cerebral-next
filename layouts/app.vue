@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { useStorage } from '@vueuse/core'
+import { Wallpaper } from '~/composables/useAppSettings';
 
 const links = useStorage<{name: string, address: string}[]>('cerebral-link-items', [])
 const hasLinks = computed(() => !!links.value.length)
@@ -7,12 +8,16 @@ const hasLinks = computed(() => !!links.value.length)
 
 const settings = useAppSettings()     
 const wallpaper = computed(() => settings.value.wallpaper)
-const wallpaperClass = computed(() => `bg-[url('/img${wallpaper.value}')]`)
+// const wallpaperClass = computed(() => {
+//     switch (wallpaper) {
+//         case: 
+//     }
+// })
 </script>
 
 <template>
     <ClientOnly>
-        <div class="absolute top-0 left-0 w-screen h-screen bg-cover blur" :class="wallpaperClass" />
+        <div class="absolute top-0 left-0 w-screen h-screen bg-cover blur" :class="wallpaper" />
     </ClientOnly>
     
     
