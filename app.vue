@@ -3,7 +3,7 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const colorMode = useColorMode()
-colorMode.preference = 'dark'
+colorMode.preference = 'dracula'
 
 gsap.registerPlugin(ScrollTrigger);
 
