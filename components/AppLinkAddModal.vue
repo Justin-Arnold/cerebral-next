@@ -50,8 +50,15 @@ const addService = handleSubmit(values => {
         @close="isOpen = false"
 
     >
-        <div class="modal-box">
-            <h3 class="text-lg font-bold">Add a new service</h3>
+        <div class="modal-box relative">
+            <div class="flex justify-between items-center">
+                <h3 class="text-lg font-bold">Add a new service</h3>
+                <Icon 
+                    name="mingcute:close-fill" 
+                    class="text-lg"
+                    @click="closeModal"
+                />
+            </div>
             <div class="modal-action">
                 <form method="dialog" class="form-control w-full gap-6" @submit="addService">
                     <div>
