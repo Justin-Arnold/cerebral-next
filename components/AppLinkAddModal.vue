@@ -2,6 +2,7 @@
 import { z } from "zod"
 import { toTypedSchema } from '@vee-validate/zod';
 import { useStorage } from '@vueuse/core'
+import BaseIconSearchInput from "./BaseIconSearchInput.vue";
 
 const isOpen = defineModel()
 
@@ -74,6 +75,14 @@ const addService = handleSubmit(values => {
                             <input class="input input-primary" v-model="address" v-bind="addressAttributes"/>
                         </label>
                         <div>{{ errors.address }}</div>
+                    </div>
+                    <div>
+                        <label>
+                            Icon
+                            <div class="input input-primary h-40">
+                                <BaseIconSearchInput :query="name" />
+                            </div>
+                        </label>
                     </div>
                     <button class="btn btn-outline mt-2">
                         Add
